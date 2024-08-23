@@ -1,0 +1,208 @@
+{
+    "quizz": [
+        {
+            "title": "HTML",
+            "icon": "./assets/img/icon-html.svg",
+            "questions": [
+                {
+                    "question": "¿Qué significa HTML?",
+                    "options": [
+                        "Hyper Trainer Marking Language",
+                        "Hyper Text Marketing Language",
+                        "Hyper Text Markup Language",
+                        "Hyper Text Markup Leveler"
+                    ],
+                    "answer": "Hyper Text Markup Language"
+                },
+                {
+                    "question": "¿Qué etiqueta HTML se utiliza para crear un hipervínculo?",
+                    "options": [
+                        "<hyperlink>",
+                        "<link>",
+                        "<a>",
+                        "<href>"
+                    ],
+                    "answer": "<a>"
+                },
+                {
+                    "question": "¿Qué etiqueta se utiliza para mostrar imágenes en HTML?",
+                    "options": [
+                        "<img>",
+                        "<image>",
+                        "<src>",
+                        "<pic>"
+                    ],
+                    "answer": "<img>"
+                },
+                {
+                    "question": "¿Qué atributo se utiliza para proporcionar la ruta de una imagen en la etiqueta <img>?",
+                    "options": [
+                        "link",
+                        "src",
+                        "href",
+                        "url"
+                    ],
+                    "answer": "src"
+                },
+                {
+                    "question": "¿Qué etiqueta HTML se utiliza para crear una lista desordenada?",
+                    "options": [
+                        "<ul>",
+                        "<ol>",
+                        "<list>",
+                        "<li>"
+                    ],
+                    "answer": "<ul>"
+                }
+            ]
+        },
+        {
+            "title": "CSS",
+            "icon": "./assets/img/icon-css.svg",
+            "questions": [
+                {
+                    "question": "¿Qué significa CSS?",
+                    "options": [
+                        "Colorful Style Sheets",
+                        "Computer Style Sheets",
+                        "Cascading Style Sheets",
+                        "Creative Style Sheets"
+                    ],
+                    "answer": "Cascading Style Sheets"
+                },
+                {
+                    "question": "¿Qué propiedad se utiliza para cambiar el color de fondo de un elemento?",
+                    "options": [
+                        "color",
+                        "bgcolor",
+                        "background-color",
+                        "background"
+                    ],
+                    "answer": "background-color"
+                },
+                {
+                    "question": "¿Cómo se aplica un estilo a todos los elementos <a>?",
+                    "options": [
+                        "a { }",
+                        ".a { }",
+                        "#a { }",
+                        "all.a { }"
+                    ],
+                    "answer": "a { }"
+                },
+                {
+                    "question": "¿Qué propiedad se utiliza para cambiar la fuente de un elemento?",
+                    "options": [
+                        "font-style",
+                        "text-style",
+                        "font-family",
+                        "typeface"
+                    ],
+                    "answer": "font-family"
+                },
+                {
+                    "question": "¿Cómo se selecciona un elemento con el nombre de clase 'container'?",
+                    "options": [
+                        ".container",
+                        "#container",
+                        "container",
+                        "*container"
+                    ],
+                    "answer": ".container"
+                }
+            ]
+        },
+        {
+            "title": "JavaScript",
+            "icon": "./assets/img/icon-js.svg",
+            "questions": [
+                {
+                    "question": "¿Cómo se llama a una función llamada 'myFunction'?",
+                    "options": [
+                        "call function myFunction()",
+                        "call myFunction()",
+                        "myFunction()",
+                        "execute myFunction()"
+                    ],
+                    "answer": "myFunction()"
+                },
+                {
+                    "question": "¿Cómo se escribe una declaración IF para ejecutar un código si 'i' NO es igual a 5?",
+                    "options": [
+                        "if (i <> 5)",
+                        "if i =! 5 then",
+                        "if (i != 5)",
+                        "if i not = 5"
+                    ],
+                    "answer": "if (i != 5)"
+                },
+                {
+                    "question": "¿Cuál es la forma correcta de escribir un comentario en JavaScript?",
+                    "options": [
+                      "'Hello World'",
+                      "//Hello World",
+                      "<!--Hello World-->",
+                      "/* Hello World */"
+                    ],
+                    "answer": "//Hello World"
+                },
+                {
+                    "question": "¿Como se le asigna un valor a una variable en JavaScript?",
+                    "options": [
+                        "-",
+                        "*",
+                        "=",
+                        "x"
+                    ],
+                    "answer": "="
+                },
+                {
+                    "question": "¿Cuál es la forma correcta de escribir un objeto en JavaScript?",
+                    "options": [
+                        "const person = {firstName: 'Cristian', lastName: 'Romero'};",
+                        "const person = {firstName = 'Cristian', lastName = 'Romero'};",
+                        "const person = (firstName: 'Cristian', lastName: 'Romero');",
+                        "const person = (firstName = 'Cristian', lastName = 'Romero');"
+                    ],
+                    "answer": "const person = {firstName: 'Cristian', lastName: 'Romero'};"
+                }
+            ]
+        },
+        {
+            "title": "Accessibility",
+            "icon": "./assets/img/icon-accessibility.svg",
+            "questions": [
+                {
+                    "question": "¿Que Herramienta se utiliza para verificar la accesibilidad de un sitio web?",
+                    "options": [
+                        "W3C Validator",
+                        "Google Lighthouse",
+                        "CSS Validator",
+                        "JavaScript Console"
+                    ],
+                    "answer": "Google Lighthouse"
+                },
+                {
+                    "question": "¿Qué significa WCAG en accesibilidad web?",
+                    "options": [
+                        "Web Content Accessibility Guidelines",
+                        "Web Compliance Accessibility Guide",
+                        "Web Content Accessibility Goals",
+                        "Website Compliance and Accessibility Guidelines"
+                    ],
+                    "answer": "Web Content Accessibility Guidelines"
+                },
+                {
+                    "question": "¿Qué elemento se utiliza para mostrar un texto alternativo en las imágenes?",
+                    "options": [
+                        "<alt>",
+                        "<figcaption>",
+                        "<description>",
+                        "<img alt='description'>"
+                    ],
+                    "answer": "<img alt='description'>"
+                }
+            ]
+        }
+    ]
+}
