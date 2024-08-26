@@ -12,8 +12,6 @@
   --option-color: #626C7F;
   --correct-color: #26D782;
   --invalid-color: #EE5454;
-  --sun-src: url("./assets/images/icon-sun-dark.svg");
-  --moon-src: url("./assets/images/icon-moon-dark.svg");
 }
 
 [data-theme="dark"] {
@@ -21,8 +19,6 @@
   --text-color-p: #ABC1E1;
   --bg-col: #313E51;
   --button-bg: #3B4D66;
-  --sun-src: url("./assets/images/icon-sun-light.svg");
-  --moon-src: url("./assets/images/icon-moon-light.svg");
 }
 
 /**************** begin css reset ****************/
@@ -32,7 +28,7 @@ html {
 }
 
 body {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background-color: var(--bg-col);
   background-image: var(--bg);
   background-repeat: no-repeat;
@@ -144,20 +140,6 @@ input:checked+.slider:before {
   border-radius: 50%;
 }
 
-.sun-container,
-.moon-container {
-  width: clamp(1rem, 0.823943661971831rem + 0.7511737089201878vw, 1.5rem);
-  height: clamp(1rem, 0.823943661971831rem + 0.7511737089201878vw, 1.5rem);
-}
-
-.sun-container>img {
-  content: var(--sun-src);
-}
-
-.moon-container>img {
-  content: var(--moon-src);
-}
-
 /*************** End - Light / Dark Toggle Switch ****************/
 body {
   height: 100vh;
@@ -198,23 +180,6 @@ p {
   font-weight: 400;
   margin-top: 1rem;
   margin-bottom: 2.5rem;
-}
-
-.progress-bar.whole {
-  width: 100%;
-  height: 1rem;
-  background-color: white;
-  margin-top: 1.5rem;
-  margin-bottom: 2.5rem;
-  padding: .25rem;
-  border-radius: 62.4375rem;
-}
-
-.progress-bar.done {
-  background-color: var(--purple);
-  border-radius: 6.5rem;
-  width: 0%;
-  height: .5rem;
 }
 
 .choices {
