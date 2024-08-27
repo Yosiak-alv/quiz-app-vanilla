@@ -1,19 +1,11 @@
 import './style.css';
-import viteLogo from '/vite.svg';
-import { setupCounter } from '@/components/counter.js';
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
-setupCounter(document.querySelector('#counter'));
+
+document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('redirect-button');
+    
+    button.addEventListener('click', () => {
+      window.location.href = 'https://sv.siman.com/'; // Cambia esto por la URL deseada
+    });
+  });
+  
