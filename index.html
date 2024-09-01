@@ -1,107 +1,115 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/style.css">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
-  </head>
-  <body>
-    <!-- toggle -->
-    <div class="darkModeSwitcher">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-          <path fill="#626C7F" d="M12 1.5a.75.75 0 0 1 .75.75v1.5a.75.75 0 1 1-1.5 0v-1.5A.75.75 0 0 1 12 1.5Zm0 15a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm0-1.5a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm9.75-2.25a.75.75 0 1 0 0-1.5h-1.5a.75.75 0 1 0 0 1.5h1.5ZM12 19.5a.75.75 0 0 1 .75.75v1.5a.75.75 0 1 1-1.5 0v-1.5a.75.75 0 0 1 .75-.75Zm-8.25-6.75a.75.75 0 1 0 0-1.5h-1.5a.75.75 0 1 0 0 1.5h1.5Zm.969-8.031a.75.75 0 0 1 1.062 0l1.5 1.5a.751.751 0 0 1-1.062 1.062l-1.5-1.5a.75.75 0 0 1 0-1.062Zm1.062 14.562a.75.75 0 1 1-1.062-1.06l1.5-1.5a.75.75 0 1 1 1.062 1.06l-1.5 1.5Zm13.5-14.562a.75.75 0 0 0-1.062 0l-1.5 1.5a.751.751 0 0 0 1.062 1.062l1.5-1.5a.75.75 0 0 0 0-1.062Zm-1.062 14.562a.75.75 0 0 0 1.062-1.06l-1.5-1.5a.75.75 0 0 0-1.062 1.06l1.5 1.5Z"/>
-      </svg>
+</head>
 
-      <div class="switcher">
-          <label class="switch">
-              <input type="checkbox" id="darkModeToggle">
-              <span class="slider round"></span>
-          </label>
-      </div>
-
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-          <path fill="#626C7F" d="M11.775 4.522A7.5 7.5 0 1 1 4.898 16.09c2.104-.57 4.974-1.953 6.24-5.326.828-2.211.876-4.408.637-6.241ZM20.184 12a8.997 8.997 0 0 0-9.315-8.994.75.75 0 0 0-.713.888c.345 1.821.42 4.092-.424 6.342-1.2 3.201-4.203 4.26-6.115 4.606a.75.75 0 0 0-.542 1.066A9 9 0 0 0 20.184 12Z"/>
-      </svg>
-    </div>
-
-    <section id="container">
-      <p id="txt-principal">Welcome to the <b>Frontend Quiz!</b></p>
-      <p><em> Pick a subject to get started</em> </p>
-    </section>
-    <section id="section-2">
-      <button id="redirect-button"  class="button-selection"><ion-icon name="logo-html5" style="width: 50px;height: 50px;"></ion-icon><p>HTML</p></button>
-
-      <button class="button-selection"><ion-icon name="logo-css3" style="width: 50px;height: 50px;"></ion-icon><p>CSS</p></button>
-
-      <button class="button-selection"><ion-icon name="logo-javascript" style="width: 50px;height: 50px;"></ion-icon><p>JavaScript</p></button>
-
-      <button class="button-selection"><ion-icon name="logo-python" style="width: 50px;height: 50px;"></ion-icon><p>Python</p></button>
-    </section>
-
-    <!-- Inicio del cuestionario -->
-    <section class="question-screen">
-      <div class="left-content">
-        <div class="question-wrapper">
-          <p class="question-count">Question <span class="question-number"></span> of <span class="question-total"></span></p>
-          <h2 class="question">Placeholder</h2>
-        </div>
-        <div id="progress-bar-container"></div>
-      </div>
-      <div class="choices options">
-        <button id="A" class="button-selection">
-          <div class="option-box">A</div>
-        </button>
-        <button id="B" class="button-selection">
-          <div class="option-box">B</div>
-        </button>
-        <button id="C" class="button-selection">
-          <div class="option-box">C</div>
-        </button>
-        <button id="D" class="button-selection">
-          <div class="option-box">D</div>
-        </button>
-
-        <button class="button-selection">Submit answer</button>
-        <div class="select-prompt">
-          <ion-icon name="information-circle-outline"></ion-icon>
-          <p class="select-prompt-text">Please select an answer</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Cuestionario completo -->
-    <article class="quiz-complete">
-      <div class="complete-left">
-        <h1>Quiz completed <br>
-          <span class="scored">You scored...</span>
-        </h1>
-      </div>
-    
-      <div class="complete-right">
-        <div class="score-container">
-          <div class="final curr-subject">
-            <div class="button-icon-container">
-              <img class="subject-img" src="./assets/images/icon-css.svg" alt="subject icon">
+<body>
+    <main>
+        <section class="row-top">
+            <div class="curr-subject">
+                <div class="button-icon-container">
+                    <img class="subject-img" src="./assets/img/icon-css.svg" alt="subject icon">
+                </div>
+                <h2 class="subject-chosen">Una Categoria</h2>
             </div>
-            <h2 class="subject-chosen">CSS</h2>
-          </div>
-          <!-- Contenedor para encerrar la puntuación -->
-          <div class="score-box">
-            <h1 class="final-score">2</h1>
-            <p class="score-out-of">out of <span class="complete-question-total">10</span></p>
-          </div>
-        </div>
-        <button class="button-restart">Play Again</button>
-      </div>
-    </article>
-    
+            <div class="light-dark-toggle">
+                <label class="light-dark-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+            </div>
+        </section>
 
-  </main>
+        <section class="start-menu">
+            <div class="left-content">
+                <h1>Bienvenido a Quiz App</h1>
+                <p>Elija una Categoria. </p>
+            </div>
 
-  <script type="module" src="./src/main.js"></script>
-  <!-- simbolos (Ionicons) -->
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>  
-  </body>
+            <div class="choices">
+                <button id="HTML" class="quiz-type">
+                    <div class="button-icon-container">
+                        <img src="./assets/img/icon-html.svg">
+                    </div>
+                    HTML
+                </button>
+                <button id="CSS" class="quiz-type">
+                    <div class="button-icon-container">
+                        <img src="./assets/img/icon-css.svg">
+                    </div>
+                    CSS
+                </button>
+                <button id="JavaScript" class="quiz-type">
+                    <div class="button-icon-container">
+                        <img src="./assets/img/icon-js.svg">
+                    </div>
+                    JavaScript
+                </button>
+                <button id="GitHub" class="quiz-type">
+                    <div class=" button-icon-container">
+                        <img src="./assets/img/icon-github.svg">
+                    </div>
+                    GitHub
+                </button>
+            </div>
+        </section>
+
+        <section class="question-screen">
+            <div class="left-content">
+                <div class="question-wrapper">
+                    <p class="question-count">Pregunta <span class="question-number"></span> de <span
+                        class="question-total"></span></p>
+                    <h2 class="question"></h2>
+                </div>
+            </div>
+            <div class="choices options">
+                <button id="A" class="option">
+                    <div class="option-box">A</div>
+                </button>
+                <button id="B" class="option">
+                    <div class="option-box">B</div>
+                </button>
+                <button id="C" class="option">
+                    <div class="option-box">C</div>
+                </button>
+                <button id="D" class="option">
+                    <div class="option-box">D</div>
+                </button>
+
+                <button class="submit-answer">Enviar</button>
+                <div class="select-prompt">
+                    <p class="select-prompt-text">Seleccione una Respuesta</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="quiz-complete">
+            <div class="complete-left">
+                <h1>
+                    Quiz Completado
+                    <span class="scored">Resultado...</span>
+                </h1>
+            </div>
+
+            <div class="complete-right">
+                <div class="score-container">
+                    <div class="final curr-subject">
+                        <div class="button-icon-container">
+                            <img class="subject-img" src="./assets/img/icon-css.svg" alt="subject icon">
+                        </div>
+                        <h2 class="subject-chosen"></h2>
+                    </div>
+                    <h1 class="final-score"></h1>
+                    <p class="score-out-of"> de <span class="complete-question-total"></span></p>
+                </div>
+                <button class="restart">Reset</button>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="src/main.js"></script>
+</body>
 </html>

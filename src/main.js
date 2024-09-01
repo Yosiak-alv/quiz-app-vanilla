@@ -1,7 +1,9 @@
-/* Toggle */
-const darkModeToggle = document.getElementById('darkModeToggle');
-const body = document.body;
+import './style.css';
+import { initQuiz } from '@/components/quiz';
+import { togglerTheme } from '@/components/themeSwitcher';
 
-darkModeToggle.addEventListener('change', () => {
-  body.classList.toggle('dark-mode');
+// Main entry point
+document.addEventListener('DOMContentLoaded', () => {
+  togglerTheme();
+  initQuiz();
 });

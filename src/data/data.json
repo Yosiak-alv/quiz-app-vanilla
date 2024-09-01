@@ -1,5 +1,5 @@
 {
-    "quizz": [
+    "quizzes": [
         {
             "title": "HTML",
             "icon": "./assets/img/icon-html.svg",
@@ -169,38 +169,58 @@
             ]
         },
         {
-            "title": "Accessibility",
-            "icon": "./assets/img/icon-accessibility.svg",
+            "title": "GitHub",
+            "icon": "./assets/img/icon-github.svg",
             "questions": [
                 {
-                    "question": "¿Que Herramienta se utiliza para verificar la accesibilidad de un sitio web?",
+                    "question": "¿Qué es GitHub?",
                     "options": [
-                        "W3C Validator",
-                        "Google Lighthouse",
-                        "CSS Validator",
-                        "JavaScript Console"
+                        "Un lenguaje de programación",
+                        "Un sistema operativo",
+                        "Una plataforma para control de versiones y colaboración",
+                        "Un navegador web"
                     ],
-                    "answer": "Google Lighthouse"
+                    "answer": "Una plataforma para control de versiones y colaboración"
                 },
                 {
-                    "question": "¿Qué significa WCAG en accesibilidad web?",
+                    "question": "¿Cuál es el comando para clonar un repositorio desde GitHub?",
                     "options": [
-                        "Web Content Accessibility Guidelines",
-                        "Web Compliance Accessibility Guide",
-                        "Web Content Accessibility Goals",
-                        "Website Compliance and Accessibility Guidelines"
+                        "git init",
+                        "git clone",
+                        "git fork",
+                        "git commit"
                     ],
-                    "answer": "Web Content Accessibility Guidelines"
+                    "answer": "git clone"
                 },
                 {
-                    "question": "¿Qué elemento se utiliza para mostrar un texto alternativo en las imágenes?",
+                    "question": "¿Qué es un 'pull request' en GitHub?",
                     "options": [
-                        "<alt>",
-                        "<figcaption>",
-                        "<description>",
-                        "<img alt='description'>"
+                        "Una solicitud para clonar un repositorio",
+                        "Una solicitud para eliminar un repositorio",
+                        "Una solicitud para revisar y fusionar cambios en un repositorio",
+                        "Una solicitud para crear un nuevo repositorio"
                     ],
-                    "answer": "<img alt='description'>"
+                    "answer": "Una solicitud para revisar y fusionar cambios en un repositorio"
+                },
+                {
+                    "question": "¿Cómo se llama el archivo que se utiliza para describir un proyecto en GitHub?",
+                    "options": [
+                        "README.md",
+                        "PROJECT.md",
+                        "DESCRIPTION.md",
+                        "OVERVIEW.md"
+                    ],
+                    "answer": "README.md"
+                },
+                {
+                    "question": "¿Qué comando se utiliza para enviar cambios locales a un repositorio remoto en GitHub?",
+                    "options": [
+                        "git push",
+                        "git pull",
+                        "git merge",
+                        "git fetch"
+                    ],
+                    "answer": "git push"
                 }
             ]
         }
