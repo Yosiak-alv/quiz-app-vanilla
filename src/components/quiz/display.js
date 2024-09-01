@@ -3,11 +3,11 @@ import { getQuiz } from './questions';
 export function displayQuestions(type) {
     document.querySelector(".start-menu").classList.toggle("visible");
     document.querySelector(".question-screen").classList.toggle("visible");
-    setQuizHeader(type);
+    quizHeader(type);
     getQuiz(type);
 }
 
-const setQuizHeader = (type) => {
+const quizHeader = (type) => {
     const options = document.querySelectorAll(".curr-subject");
     for (let option of options) {
         option.lastElementChild.innerHTML = type;
