@@ -21,8 +21,6 @@
   --button-bg: #3B4D66;
 }
 
-/**************** begin css reset ****************/
-
 html {
   box-sizing: border-box;
 }
@@ -33,11 +31,12 @@ body {
   background-image: var(--bg);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: inherit;
 }
 
@@ -45,8 +44,7 @@ body {
   margin: 0;
 }
 
-img,
-svg {
+img, svg {
   display: block;
   max-width: 100%;
 }
@@ -55,20 +53,20 @@ button {
   font: inherit;
 }
 
-/*************** End of css reset ****************/
-
-/*************** Start Hide Other Screens ****************/
-.start-menu {
-  display: none;
-}
-
-.quiz-complete {
-  display: none;
-  flex-direction: column;
-}
-
+.start-menu,
+.quiz-complete,
 .question-screen {
   display: none;
+}
+
+.visible {
+  display: block; /* Cambia a flex si es necesario */
+}
+
+.start-menu.visible,
+.quiz-complete.visible,
+.question-screen.visible {
+  display: flex;
   flex-direction: column;
 }
 
@@ -84,10 +82,6 @@ button {
   visibility: hidden;
   gap: 1rem;
 }
-
-/*************** End Hide Other Screens ****************/
-
-/*************** Start - Light / Dark Toggle Switch ****************/
 
 .light-dark-toggle {
   display: flex;
@@ -128,7 +122,7 @@ button {
   width: clamp(0.75rem, 0.573943661971831rem + 0.7511737089201878vw, 1.25rem);
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
   transform: translateX(clamp(0.8125rem, 0.7033450704225352rem + 0.46572769953051646vw, 1.1225rem));
 }
 
@@ -138,13 +132,6 @@ input:checked+.slider:before {
 
 .slider.round:before {
   border-radius: 50%;
-}
-
-/*************** End - Light / Dark Toggle Switch ****************/
-body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
 }
 
 section {
@@ -158,7 +145,7 @@ h1 {
   font-size: clamp(2.5rem, 1.972rem + 2.25vw, 4rem);
 }
 
-h1>span {
+h1 > span {
   font-weight: 500;
 }
 
@@ -228,24 +215,24 @@ button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, .5) 0%, rgba(255, 255, 255, 0.50) 100%), var(--purple);
 }
 
-.button-icon-container>img {
+.button-icon-container > img {
   border-radius: .75rem;
   padding: .15rem;
 }
 
-.button-icon-container>img[src="./assets/images/icon-html.svg"] {
+.button-icon-container > img[src="./assets/images/icon-html.svg"] {
   background-color: var(--html-bg);
 }
 
-.button-icon-container>img[src="./assets/images/icon-css.svg"] {
+.button-icon-container > img[src="./assets/images/icon-css.svg"] {
   background-color: var(--css-bg);
 }
 
-.button-icon-container>img[src="./assets/images/icon-js.svg"] {
+.button-icon-container > img[src="./assets/images/icon-js.svg"] {
   background-color: var(--js-bg);
 }
 
-.button-icon-container>img[src="./assets/images/icon-accessibility.svg"] {
+.button-icon-container > img[src="./assets/images/icon-accessibility.svg"] {
   background-color: var(--accessibility-bg);
 }
 
@@ -268,7 +255,7 @@ button:hover {
   gap: 1rem;
 }
 
-.select-prompt>p {
+.select-prompt > p {
   color: var(--invalid-color);
   margin: 0;
   font-style: normal;
@@ -319,13 +306,9 @@ button:hover {
   justify-content: space-between;
 }
 
-.start-menu>.left-content {
+.start-menu > .left-content {
   justify-content: flex-start;
   gap: 3rem;
-}
-
-.visible {
-  display: block;
 }
 
 .score-container {
@@ -342,7 +325,7 @@ button:hover {
   padding: 2rem;
 }
 
-.score-container>p {
+.score-container > p {
   margin: 0;
 }
 
@@ -363,62 +346,42 @@ button:hover {
 
 @media (min-width: 768px) {
   button {
-      font-size: 1.75rem;
+    font-size: 1.75rem;
   }
 
   section {
-      padding: 2.5rem 4rem;
+    padding: 2.5rem 4rem;
   }
 
   .question-screen {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .quiz-complete {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .row-top {
-      margin-bottom: 0;
+    margin-bottom: 0;
   }
 
   h1 {
-      width: 29rem;
+    width: 29rem;
   }
 }
 
 @media (min-width: 1440px) {
-
   body {
-      align-items: center;
+    align-items: center;
   }
 
   .left-content {
-      max-width: 35rem;
+    max-width: 35rem;
   }
 
-  .visible {
-      display: flex;
-  }
-
-  .start-menu {
-      justify-content: space-between;
-      gap: 10rem;
-  }
-
-  .question-screen {
-      flex-direction: row;
-      gap: 10rem;
-  }
-
-  .quiz-complete {
-      flex-direction: row;
-      gap: 10rem;
-  }
-
-  .choices {
-      width: 35rem;
-      height: 28rem;
-      gap: 1.5rem;
+  .start-menu.visible,
+  .quiz-complete.visible,
+  .question-screen.visible {
+    flex-direction: row;
   }
 }
